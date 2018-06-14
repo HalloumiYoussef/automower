@@ -4,7 +4,7 @@ import kata.mower.config.AppMower;
 import kata.mower.dto.Position;
 
 /**
- * Created by a613276 on 12/06/2018.
+ * Created by YHI on 12/06/2018.
  */
 public class TestMain {
 

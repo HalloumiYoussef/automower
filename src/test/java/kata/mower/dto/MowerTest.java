@@ -8,7 +8,7 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 /**
- * Created by a613276 on 12/06/2018.
+ * Created by YHI on 12/06/2018.
  */
 public class MowerTest {
 

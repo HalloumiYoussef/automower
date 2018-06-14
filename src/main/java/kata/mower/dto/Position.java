@@ -6,7 +6,7 @@ import kata.mower.enums.EnumOrient;
 import kata.mower.util.EnumOrientUtil;
 
 /**
- * Created by a613276 on 11/06/2018.
+ * Created by YHI on 11/06/2018.
  */
 public class Position {
 
