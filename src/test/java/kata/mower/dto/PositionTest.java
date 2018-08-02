@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class PositionTest {
 
     @Test
-    public void processInstructionAOnBottomLeftWithOrientN() throws Exception {
+    public void processInstructionAOnBottomLeftWithOrientN() {
         Position position = new Position(0,0, EnumOrient.N);
         position.processInstruction(EnumMove.A);
         assertEquals(0, position.getX());
@@ -22,7 +22,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionAOnBottomLeftWithOrientW() throws Exception {
+    public void processInstructionAOnBottomLeftWithOrientW() {
         Position position = new Position(0,0, EnumOrient.W);
         position.processInstruction(EnumMove.A);
         assertEquals(0, position.getX());
@@ -31,7 +31,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionAOnBottomLeftWithOrientS() throws Exception {
+    public void processInstructionAOnBottomLeftWithOrientS() {
         Position position = new Position(0,0, EnumOrient.S);
         position.processInstruction(EnumMove.A);
         assertEquals(0, position.getX());
@@ -40,7 +40,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionAOnUpperRightWithOrientN() throws Exception {
+    public void processInstructionAOnUpperRightWithOrientN() {
         Position position = new Position(AppMower.upperRightX, AppMower.upperRightY, EnumOrient.N);
         position.processInstruction(EnumMove.A);
         assertEquals(AppMower.upperRightX, position.getX());
@@ -49,7 +49,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionAOnUpperRightWithOrientE() throws Exception {
+    public void processInstructionAOnUpperRightWithOrientE() {
         Position position = new Position(AppMower.upperRightX, AppMower.upperRightY, EnumOrient.E);
         position.processInstruction(EnumMove.A);
         assertEquals(AppMower.upperRightX, position.getX());
@@ -58,7 +58,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionAOnUpperRightWithOrientW() throws Exception {
+    public void processInstructionAOnUpperRightWithOrientW() {
         Position position = new Position(AppMower.upperRightX, AppMower.upperRightY, EnumOrient.W);
         position.processInstruction(EnumMove.A);
         assertEquals(AppMower.upperRightX-1, position.getX());
@@ -67,7 +67,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processMultipleInstructions() throws Exception {
+    public void processMultipleInstructions() {
         Position position = new Position(0, 1, EnumOrient.N);
         position.processInstruction(EnumMove.A);
         position.processInstruction(EnumMove.D);
@@ -84,7 +84,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionTurnLeft() throws Exception {
+    public void processInstructionTurnLeft() {
         Position position = new Position(AppMower.upperRightX, AppMower.upperRightY, EnumOrient.W);
         position.processInstruction(EnumMove.G);
         assertEquals(AppMower.upperRightX, position.getX());
@@ -93,7 +93,7 @@ public class PositionTest {
     }
 
     @Test
-    public void processInstructionTurnRight() throws Exception {
+    public void processInstructionTurnRight() {
         Position position = new Position(AppMower.upperRightX, AppMower.upperRightY, EnumOrient.W);
         position.processInstruction(EnumMove.D);
         assertEquals(AppMower.upperRightX, position.getX());

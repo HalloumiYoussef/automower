@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class MowerTest {
 
     @Test
-    public void applyInstructionsCase1() throws Exception {
+    public void applyInstructionsCase1() {
         Position initialPosition =  new Position(1, 2, EnumOrient.N);
         Mower mower = new Mower(initialPosition,
                 Arrays.asList("G", "A", "G", "A","G", "A", "G", "A", "A"));
@@ -24,7 +24,7 @@ public class MowerTest {
     }
 
     @Test
-    public void applyInstructionsCase2() throws Exception {
+    public void applyInstructionsCase2() {
         Position initialPosition =  new Position(3, 3, EnumOrient.E);
         Mower mower = new Mower(initialPosition,
                 Arrays.asList("A", "A", "D", "A","A", "D", "A", "D", "D", "A"));
