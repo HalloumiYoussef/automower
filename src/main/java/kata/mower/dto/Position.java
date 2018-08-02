@@ -4,11 +4,14 @@ import kata.mower.config.AppMower;
 import kata.mower.enums.EnumMove;
 import kata.mower.enums.EnumOrient;
 import kata.mower.util.EnumOrientUtil;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by YHI on 11/06/2018.
  */
 public class Position {
+
+    private static final String SEP = " ";
 
     private int x;
     private int y;
@@ -92,10 +95,6 @@ public class Position {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer();
-        sb.append(x);
-        sb.append(" ").append(y);
-        sb.append(" ").append(orientation);
-        return sb.toString();
+        return StringUtils.join(x, SEP, y, SEP, orientation);
     }
 }
