@@ -16,33 +16,13 @@ public class Mower {
         //Default
     }
 
-    public Mower(Position currentPosition) {
-        this.currentPosition = currentPosition;
-    }
-
     public Mower(Position currentPosition, List<String> instructions) {
         this.currentPosition = currentPosition;
         this.instructions = instructions;
     }
 
-    public Position getCurrentPosition() {
-        return currentPosition;
-    }
-
-    public void setCurrentPosition(Position currentPosition) {
-        this.currentPosition = currentPosition;
-    }
-
-    public List<String> getInstructions() {
-        return instructions;
-    }
-
-    public void setInstructions(List<String> instructions) {
-        this.instructions = instructions;
-    }
-
     public Position applyInstructions(){
-        instructions.stream().forEach(i -> this.currentPosition.processInstruction(EnumMove.valueOf(i)));
+        instructions.forEach(i -> this.currentPosition.processInstruction(EnumMove.valueOf(i)));
         return this.currentPosition;
     }
 }

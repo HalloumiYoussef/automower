@@ -24,31 +24,19 @@ public class Position {
         this.orientation = orientation;
     }
 
-    public int getX() {
+    int getX() {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
+    int getY() {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public EnumOrient getOrientation() {
+    EnumOrient getOrientation() {
         return orientation;
     }
 
-    public void setOrientation(EnumOrient orientation) {
-        this.orientation = orientation;
-    }
-
-    public void processInstruction(EnumMove move) {
+    void processInstruction(EnumMove move) {
         if(EnumMove.A.equals(move)){
             moveForward();
         }
